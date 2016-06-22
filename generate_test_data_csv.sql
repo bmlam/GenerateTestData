@@ -1,5 +1,5 @@
 -- In case you need to create the demo table
-
+-- of course you can use your own table
 CREATE TABLE employees
   (
     employee_id    NUMBER(6) ,
@@ -15,6 +15,14 @@ CREATE TABLE employees
     department_id  NUMBER(4)
   ) ;
   
+-- Use this query to generate the column list which is harded in the PIVOT clause of the generator query  
+-- For your own table, simply replace EMPLOYEES
+select listagg( ''''||column_name  ||'''', ',' ) within group (order by column_id )
+from user_tab_columns
+where table_name = 'EMPLOYEES'
+;
+
+-- this query generates 2 rows of csv data. To generate more N rows replace the value 2 in the line containing "CONNECT BY LEVEL" 
 WITH magic AS
   ( SELECT 'EMPLOYEES' AS my_table FROM dual
   ),
