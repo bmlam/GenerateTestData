@@ -68,3 +68,6 @@ values(
  to_date('2-4-1981','dd-mm-yyyy'),  
  2975, null, 20  
 );
+
+commit;
+
