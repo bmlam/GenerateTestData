@@ -8,3 +8,8 @@ USER_TAB_COLUMNS (or the ALL_ version) the column names and data type informatio
 appropiate dummy test data. Since we query USER_TAB_COLUMNS, each column initially is returned as one row. Hence we use the 
 PIVOT clause transpose the rows to columns. That is where we need the columns name.
 
+emp_dept_tables.sql simply creates and populate the old style demo tables EMP and DEPT.
+
+An excellent resource to populate a test schema with a more interesting data module is provided by Oracle Corporation:
+
+http://download.oracle.com/oll/tutorials/DBXETutorial/html/module2/les02_load_data_sql.htm
